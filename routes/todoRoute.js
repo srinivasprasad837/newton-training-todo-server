@@ -3,7 +3,7 @@ const todoService = require('../services/todoService');
 
 router.get('/tasks', async (req, res) => {
     const result = await todoService.getTodos();
-    res.json(result);
+    res.status(200).json(result);
 });
 
 router.delete('/tasks/:id', async (req, res) => {

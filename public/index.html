@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Write example</title>
+  <h>Fetch api demo...<h>
+
+  <script>
+    async function newContent() {
+    let data = await fetch('/tasks')
+        .then(response => response.json());
+
+    data.forEach((todo) => {
+        console.log(todo);
+        document.write(`<p>todo:${todo.task} ::: Status: ${todo.status} </p>`);
+        });
+    }
+  </script>
+</head>
+
+<body onload="newContent();">
+  <p>Fetch api demo...</p>
+</body>
+
+</html>

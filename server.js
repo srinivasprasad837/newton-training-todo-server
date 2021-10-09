@@ -7,6 +7,8 @@ todoService.createTableIfNotExists();
 
 app.use(express.json());
 
+app.use(express.static('public'));
+
 app.use('/', todoRouter);
 
 app.listen(3000);
